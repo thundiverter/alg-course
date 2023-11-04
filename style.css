@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600;800&display=swap');
+
+
+:root {
+    font-family: 'Onest', sans-serif;
+
+    --color-bg: white;
+    --color-bg-nav: #01303f;
+    --color-bg-footer: #efefef;
+    
+    --color-text: black;
+    --color-text-secondary: gray;
+    --color-link: #02577a;
+    --color-link-nav: white;
+
+    --color-button: #02577a;
+    --color-button-focus: #004d6e;
+    --color-button-text: white;
+
+    --color-form-bg: #d4f0fc;
+    --color-form-text: black;
+
+    --color-input-border: gray;
+
+    --color-table: lightgray;
+}
+
+body {
+    margin: 0 auto;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    max-width: 1280px;
+}
+
+/* elements */
+
+/* anchors */
+a {
+    text-underline-offset: 5px;
+    color: var(--color-link);
+    font-weight: 600;
+    text-decoration-color: rgb(200, 200, 200);
+}
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+}
+
+/* marked list */
+ul li {
+    margin-bottom: .75rem;
+}
+ul li p {
+    margin: 0 0 .25rem 0;
+}
+ol li {
+    margin-bottom: .4rem;
+}
+
+/* button */
+button {
+    font-family: inherit;
+    font-size: .9rem;
+    color: var(--color-button);
+    border: none;
+    padding: .5rem .8rem;
+    background: transparent;
+    border: 1px solid var(--color-button);
+    border-radius: .6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition-duration: .1s;
+}
+button:hover,
+button:focus-visible {
+    border: 1px solid var(--color-button-focus);
+}
+button:active {
+    transform: translateY(1px);
+}
+
+/* primary button */
+button.primary {
+    color: var(--color-button-text);
+    background: var(--color-button);
+}
+button.primary:hover,
+button.primary:focus-visible {
+    background: var(--color-button-focus);
+}
+
+/* input */
+input {
+    border: 1px solid var(--color-input-border);
+    border-radius: .6rem;
+    padding: .5rem .8rem;
+    font-family: inherit;
+    font-size: .9rem;
+}
+
+/* h2 */
+h2 {
+    text-decoration: underline 2px solid currentColor;
+    text-underline-offset: .5rem;
+}
+
+/* table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table th,
+table td {
+    border: 1px solid var(--color-table);
+    padding: .4rem .6rem;
+    text-align: left;
+}
+
+/* HEADER */
+p.secondary-title {
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+p.header-teacher {
+    margin: -.75rem 0 2rem 0;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--color-bg-nav);
+    box-shadow: 0 0 0 100vmax var(--color-bg-nav);
+    clip-path: inset(0 -100vmax);
+    margin: 0 -1rem;
+    padding: .5rem 1rem;
+
+    position: sticky;
+    top: -.1rem;
+}
+nav a {
+    padding: .35rem .75rem;
+    color: var(--color-link-nav);
+    text-decoration-color: transparent;
+}
+
+/* MAIN */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2rem;
+}
+
+/* SECTIONS */
+section {
+    padding: 2rem 0;
+}
+
+/* FOOTER */
+footer {
+    background: var(--color-bg-footer);
+    box-shadow: 0 0 0 100vmax var(--color-bg-footer);
+    clip-path: inset(0 -100vmax);
+    margin: 2rem -1rem -1rem -1rem;
+    padding: 1rem;
+}
+footer p {
+    font-size: .85rem;
+    color: var(--color-text-secondary);
+}
+
+/* form */
+form {
+    background: var(--color-form-bg);
+    color: var(--color-form-text);
+    padding: 1rem;
+    border-radius: .8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+form h3 {
+    margin: 0;
+}
+form p {
+    margin: .25rem 0;
+}
+form label {
+    font-size: .85rem;
+}
+
+/* tabs */
+#books-tabbtns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    #books-tabbtns button {
+        width: 100%;
+    }
+}
+@media (min-width: 801px) {
+    #books-tabbtns button {
+        border-radius: .6rem .6rem 0 0;
+        border-bottom-color: transparent;
+    }
+    nav {
+        justify-content: flex-start;
+    }
+}
