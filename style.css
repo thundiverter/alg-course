@@ -12,6 +12,7 @@
     --color-text-secondary: gray;
     --color-link: #02577a;
     --color-link-nav: white;
+    --color-link-underline: rgb(200, 200, 200);
 
     --color-button: #02577a;
     --color-button-focus: #004d6e;
@@ -40,7 +41,7 @@ a {
     text-underline-offset: 5px;
     color: var(--color-link);
     font-weight: 600;
-    text-decoration-color: rgb(200, 200, 200);
+    text-decoration-color: var(--color-link-underline);
 }
 a:hover,
 a:focus-visible {
